@@ -15,13 +15,14 @@ class CreateDataOrganisasiTable extends Migration
         Schema::table('data_organisasi', function (Blueprint $table) {
             $table->increments('id');
             $table->string('organisasi_id');
-            $table->vachar('user_name',60);
-            $table->integer('provinsi_id',2);$this->integer()
+            $table->string('user_name',60);
+            $table->integer('provinsi_id',2);
             $table->integer('camat_id',2);
             $table->integer('deskel_id',4);
             $table->integer('is_level')->default(1);
             $table->varchar('email')->uniqe();
             $table->vachar('password',60);
+            $table->timestamps();
         });
     }
 

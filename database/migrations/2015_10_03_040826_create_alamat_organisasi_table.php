@@ -15,11 +15,12 @@ class CreateAlamatOrganisasiTable extends Migration
         Schema::table('data_alamat_organisasi', function (Blueprint $table) {
             $table->increments('id');
             $table->string('organisasi_id');
-            $table->vachar('jalan');
-            $table->integer('telp');$this->integer()
+            $table->string('jalan');
+            $table->integer('telp');
             $table->integer('faximile');
             $table->integer('telepon');
-            $table->varchar('email',1);
+            $table->string('email',1);
+            $table->timestamps();
         });
     }
 

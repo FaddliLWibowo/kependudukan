@@ -16,12 +16,13 @@ class CreateDataKecamatanTable extends Migration
             $table->increments('id');
             $table->string('kabukot_id',2);
             $table->string('camat_id',2);
-            $table->vachar('kecamatan',200);
-            $table->integer('is_status');$this->integer()
+            $table->string('kecamatan',200);
+            $table->integer('is_status');
             $table->integer('pbb_kec_kode',2);
             $table->integer('arsip_kec_kode',3);
             $table->integer('kodepos_kec_kode',5);
             $table->integer('ramil_kec_kode',4);
+            $table->timestamps();
         });
     }
 
