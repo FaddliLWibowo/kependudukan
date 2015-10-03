@@ -14,15 +14,15 @@ class CreateDataKabukotTable extends Migration
     {
         Schema::table('data_kabukot', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('prov_id');
-            $table->string('kabukot_id');$this->integer()
-            $table->vachar('kabukot');
-            $table->integer('is_status');
-            $table->integer('is_waktu');
-            $table->integer('pbb_kabukot_kode');
-            $table->integer('arsip_kabukot_kode');
-            $table->integer('kodepos_kabukot_kode');
-            $table->integer('ramil_kabukot_kode');
+            $table->string('prov_id',2);
+            $table->string('kabukot_id',2);$this->integer()
+            $table->vachar('kabukot',200);
+            $table->integer('is_status');$this->integer()
+            $table->integer('is_waktu',3);
+            $table->integer('pbb_kabukot_kode',2);
+            $table->integer('arsip_kabukot_kode',3);
+            $table->integer('kodepos_kabukot_kode',5);
+            $table->integer('ramil_kabukot_kode',4);
         });
     }
 

@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateDataPejabatTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('data_pejabat', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('organisasi_id');
+            $table->vachar('nama',60);
+            $table->integer('nip',28);$this->integer()
+            $table->integer('pangkat',1);
+            $table->integer('jabatan',1);
+            $table->integer('keterangan',1)->default(1);
+
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('data_pejabat', function (Blueprint $table) {
+            //
+        });
+    }
+}

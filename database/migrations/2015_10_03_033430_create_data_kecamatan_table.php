@@ -14,14 +14,14 @@ class CreateDataKecamatanTable extends Migration
     {
         Schema::table('data_kecamatan', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('kabukot_id');
-            $table->string('camat_id');
-            $table->vachar('kecamatan');
+            $table->string('kabukot_id',2);
+            $table->string('camat_id',2);
+            $table->vachar('kecamatan',200);
             $table->integer('is_status');$this->integer()
-            $table->integer('pbb_kec_kode');
-            $table->integer('arsip_kec_kode');
-            $table->integer('kodepos_kec_kode');
-            $table->integer('ramil_kec_kode');
+            $table->integer('pbb_kec_kode',2);
+            $table->integer('arsip_kec_kode',3);
+            $table->integer('kodepos_kec_kode',5);
+            $table->integer('ramil_kec_kode',4);
         });
     }
 
