@@ -17,10 +17,10 @@ class CreateDataLainnyaTable extends Migration
             $table->string('nik',16)->uniqe();
             $table->string('kelainan_fisik',1);
             $table->string('cacat_fisik',1);
-            $table->varchar('warga_negara',120);
-            $table->varchar('website',86);
-            $table->varchar('email',86);
-            $table->varchar('phone',20);
+            $table->string('warga_negara',120);
+            $table->string('website',86);
+            $table->string('email',86);
+            $table->string('phone',20);
             $table->integer('is_status',1);
             $table->timestamps();
         });

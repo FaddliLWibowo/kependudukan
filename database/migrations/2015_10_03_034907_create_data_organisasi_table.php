@@ -20,8 +20,8 @@ class CreateDataOrganisasiTable extends Migration
             $table->integer('camat_id',2);
             $table->integer('deskel_id',4);
             $table->integer('is_level')->default(1);
-            $table->varchar('email')->uniqe();
-            $table->vachar('password',60);
+            $table->string('email')->uniqe();
+            $table->string('password',60);
             $table->timestamps();
         });
     }

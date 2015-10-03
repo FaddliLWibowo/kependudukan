@@ -16,12 +16,12 @@ class CreateDataKeluargaTable extends Migration
             $table->increments('id');
             $table->string('kk_id',18);
             $table->string('nik_kk',16)->uniqe();
-            $table->varchar('nama_kk',20);
-            $table->varchar('alamat',200);
-            $table->varchar('rt',3);
-            $table->varchar('rw',3);
-            $table->vachar('dusun',120);
-            $table->varchar('phone',20);
+            $table->string('nama_kk',20);
+            $table->string('alamat',200);
+            $table->string('rt',3);
+            $table->string('rw',3);
+            $table->string('dusun',120);
+            $table->string('phone',20);
             $table->integer('is_status',1);
             $table->timestamps();
         });

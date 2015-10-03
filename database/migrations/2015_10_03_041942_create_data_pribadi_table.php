@@ -16,12 +16,12 @@ class CreateDataPribadiTable extends Migration
             $table->increments('id');
             $table->string('kk_id',18);
             $table->string('nik',16)->uniqe();
-            $table->varchar('title_depan',20);
-            $table->varchar('title_belakang',20);
-            $table->varchar('nama',200);
+            $table->string('title_depan',20);
+            $table->string('title_belakang',20);
+            $table->string('nama',200);
             $table->integer('kelamin',1);
-            $table->vachar('tempat_lahir',86);
-            $table->date('tanggal_lahir',4);
+            $table->string('tempat_lahir',86);
+            $table->string('tanggal_lahir',4);
             $table->integer('gol_darah',2);
             $table->integer('agama',1);
             $table->integer('status_kawin',1);
