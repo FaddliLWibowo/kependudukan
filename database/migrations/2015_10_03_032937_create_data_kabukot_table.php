@@ -18,7 +18,7 @@ class CreateDataKabukotTable extends Migration
             $table->string('kode_kabupaten', 3);
             $table->string('kabupaten');
             $table->string('status');
-            $table->string('waktu', 10);
+            $table->string('waktu', 4);
             $table->integer('pbb_kabukot_kode', 2);
             $table->integer('arsip_kabukot_kode', 3);
             $table->integer('kodepos_kabukot_kode', 5);

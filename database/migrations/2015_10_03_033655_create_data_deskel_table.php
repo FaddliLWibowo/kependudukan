@@ -12,7 +12,7 @@ class CreateDataDeskelTable extends Migration
      */
     public function up()
     {
-        Schema::table('kecamatan', function (Blueprint $table) {
+        Schema::table('desa', function (Blueprint $table) {
             $table->increments('id');
             $table->string('kecamatan_id', 2);
             $table->string('kode_desa', 4);

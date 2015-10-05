@@ -14,8 +14,11 @@ class Kecamatan_Seeder extends Seeder
         DB::table('data_kecamatan')->truncate();
         DB::table('data_kecamatan')->insert([
 
-            ['id' => '', 'kabukot_id' => '','camat_id' =>'','kecamatan' => '','pbb_kec_kode' => '','arsip_kec_kode'=> '','kodepos_kec_kode' => '', 'ramil_kec_kode' => ''],
-
-        ]);
+            ['id' => 1, 'kabupaten_id' => '73','kode_kecamatan' =>'01','kecamatan' => 'Blimbing','pbb_kec_kode' => '','arsip_kec_kode'=> '','kodepos_kec_kode' => '', 'ramil_kec_kode' => ''],
+            ['id' => 2, 'kabupaten_id' => '73','kode_kecamatan' =>'02','kecamatan' => 'Klojen','pbb_kec_kode' => '','arsip_kec_kode'=> '','kodepos_kec_kode' => '', 'ramil_kec_kode' => ''],
+            ['id' => 3, 'kabupaten_id' => '73','kode_kecamatan' =>'03','kecamatan' => 'Kedungkandang','pbb_kec_kode' => '','arsip_kec_kode'=> '','kodepos_kec_kode' => '', 'ramil_kec_kode' => ''],
+            ['id' => 4, 'kabupaten_id' => '73','kode_kecamatan' =>'04','kecamatan' => 'Sukun','pbb_kec_kode' => '','arsip_kec_kode'=> '','kodepos_kec_kode' => '', 'ramil_kec_kode' => ''],
+            ['id' => 5, 'kabupaten_id' => '73','kode_kecamatan' =>'05','kecamatan' => 'Lowokwaru','pbb_kec_kode' => '','arsip_kec_kode'=> '','kodepos_kec_kode' => '', 'ramil_kec_kode' => ''],
+kabupaten        ]);
     }
 }
