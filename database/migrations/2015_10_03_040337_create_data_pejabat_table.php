@@ -12,14 +12,14 @@ class CreateDataPejabatTable extends Migration
      */
     public function up()
     {
-        Schema::table('data_pejabat', function (Blueprint $table) {
+        Schema::table('pejabat', function (Blueprint $table) {
             $table->increments('id');
             $table->string('organisasi_id');
             $table->string('nama', 60);
             $table->integer('nip', 28);
             $table->integer('pangkat', 1);
             $table->integer('jabatan', 1);
-            $table->integer('keterangan', 1)->default(1);
+            $table->string('keterangan');
             $table->timestamps();
         });
     }

@@ -12,16 +12,13 @@ class CreateDataOrganisasiTable extends Migration
      */
     public function up()
     {
-        Schema::table('data_organisasi', function (Blueprint $table) {
+        Schema::table('organisasi', function (Blueprint $table) {
             $table->increments('id');
             $table->string('organisasi_id');
-            $table->string('user_name',60);
-            $table->integer('provinsi_id',2);
-            $table->integer('camat_id',2);
-            $table->integer('deskel_id',4);
-            $table->integer('is_level')->default(1);
-            $table->string('email')->uniqe();
-            $table->string('password',60);
+            $table->string('user_id', 60);
+            $table->integer('desa_id', 2);
+            $table->integer('level')->default(1);
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }

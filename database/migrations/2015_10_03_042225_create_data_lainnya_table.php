@@ -12,16 +12,16 @@ class CreateDataLainnyaTable extends Migration
      */
     public function up()
     {
-        Schema::table('data_data_lainnya', function (Blueprint $table) {
+        Schema::table('lainnya', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nik',16)->uniqe();
-            $table->string('kelainan_fisik',1);
-            $table->string('cacat_fisik',1);
-            $table->string('warga_negara',120);
-            $table->string('website',86);
-            $table->string('email',86);
-            $table->string('phone',20);
-            $table->integer('is_status',1);
+            $table->string('nik', 16)->uniqe();
+            $table->string('kelainan_fisik', 1);
+            $table->string('cacat_fisik', 1);
+            $table->string('warga_negara', 120);
+            $table->string('website', 86);
+            $table->string('email', 86);
+            $table->string('phone', 20);
+            $table->integer('status', 1);
             $table->timestamps();
         });
     }

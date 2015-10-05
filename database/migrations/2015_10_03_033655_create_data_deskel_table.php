@@ -12,16 +12,16 @@ class CreateDataDeskelTable extends Migration
      */
     public function up()
     {
-        Schema::table('data_deskel', function (Blueprint $table) {
+        Schema::table('kecamatan', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('camat_id',2);
-            $table->string('deskel_id',4);
-            $table->string('deskel',200);
-            $table->integer('is_status');
-            $table->integer('pbb_kec_kode',5);
-            $table->integer('arsip_kec_kode',3);
+            $table->string('kecamatan_id', 2);
+            $table->string('kode_desa', 4);
+            $table->string('desa');
+            $table->string('status');
+            $table->integer('pbb_kec_kode', 5);
+            $table->integer('arsip_kec_kode', 3);
             $table->integer('kodepos_kec_kode,5');
-            $table->integer('ramil_kec_kode',4);
+            $table->integer('ramil_kec_kode', 4);
             $table->timestamps();
         });
     }

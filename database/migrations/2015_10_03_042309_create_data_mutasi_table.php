@@ -12,18 +12,15 @@ class CreateDataMutasiTable extends Migration
      */
     public function up()
     {
-        Schema::table('data_data_mutasi', function (Blueprint $table) {
+        Schema::table('mutasi', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nik', 16)->unique();
             $table->string('alamat', 1);
-            $table->string('rt', 1);
-            $table->string('rw', 120);
-            $table->string('dusun', 86);
-            $table->integer('prov_id', 1);
-            $table->integer('kabkot_id', 1);
-            $table->integer('camat_id', 1);
-            $table->integer('deskel_id', 1);
-            $table->integer('is_status', 1);
+            $table->string('rt', 3);
+            $table->string('rw', 20);
+            $table->string('dusun');
+            $table->integer('desa_id', 5);
+            $table->integer('status', 1);
             $table->timestamps();
         });
     }

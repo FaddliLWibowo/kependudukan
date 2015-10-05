@@ -12,24 +12,24 @@ class CreateDataBiometricTable extends Migration
      */
     public function up()
     {
-        Schema::table('data_data_biometric', function (Blueprint $table) {
+        Schema::table('biometric', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nik',16)->uniqe();
-            $table->tinyInteger('foto',58);
-            $table->tinyInteger('tanda tangan',1);
-            $table->string('iris_mata_kanan',200);
-            $table->string('iris_mata_kiri',16)->uniqe();
-            $table->string('kelingking_kiri',58);
-            $table->integer('manis_kiri',1);
-            $table->string('tengah_kiri',200);
-            $table->string('petunjuk_kiri',200);
-            $table->string('jempol_kiri',200);
-            $table->string('kelingking_kanan',58);
-            $table->integer('manis_kanan',1);
-            $table->string('tengah_kanan',200);
-            $table->string('petunjuk_kanan',200);
-            $table->string('jempol_kanan',200);
-            $table->integer('is_status',1);
+            $table->string('nik', 16)->unique();
+            $table->tinyInteger('foto', 58);
+            $table->tinyInteger('tanda tangan', 1);
+            $table->string('iris_mata_kanan', 200);
+            $table->string('iris_mata_kiri', 16)->unique();
+            $table->string('kelingking_kiri', 58);
+            $table->integer('manis_kiri', 1);
+            $table->string('tengah_kiri', 200);
+            $table->string('petunjuk_kiri', 200);
+            $table->string('jempol_kiri', 200);
+            $table->string('kelingking_kanan', 58);
+            $table->integer('manis_kanan', 1);
+            $table->string('tengah_kanan', 200);
+            $table->string('petunjuk_kanan', 200);
+            $table->string('jempol_kanan', 200);
+            $table->integer('is_status', 1);
             $table->timestamps();
         });
     }
