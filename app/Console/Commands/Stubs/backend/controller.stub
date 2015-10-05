@@ -1,0 +1,60 @@
+<?php
+
+namespace App\Http\Controllers;
+
+/**
+ * Class {{class}}
+ *
+ * @package App\Http\Controllers
+ */
+class {{class}} extends Controller
+{
+
+    /**
+     * @param SomeRepository $param
+     */
+    public function __construct(<<repository>> ${{param}})
+    {
+        $this->{{param}} = ${{param}};
+    }
+
+    /**
+     *
+     */
+    public function index()
+    {
+
+    }
+
+    /**
+     * @param $id
+     */
+    public function show($id)
+    {
+
+    }
+
+    /**
+     *
+     */
+    public function store()
+    {
+
+    }
+
+    /**
+     * @param $id
+     */
+    public function update($id)
+    {
+
+    }
+
+    /**
+     * @param $id
+     */
+    public function destroy($id)
+    {
+
+    }
+}
