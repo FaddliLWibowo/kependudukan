@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
+=======
 use Illuminate\Routing\Controller;
+>>>>>>> origin/master
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
