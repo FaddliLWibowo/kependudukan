@@ -3,12 +3,12 @@
 
 	var app = angular.module('app',
 		[
-		'app.controllers',
-		'app.filters',
-		'app.services',
-		'app.directives',
-		'app.routes',
-		'app.config'
+			'app.controllers',
+			'app.filters',
+			'app.services',
+			'app.directives',
+			'app.routes',
+			'app.config'
 		]);
 
 
@@ -190,13 +190,13 @@
 })();
 
 (function (){
-    "use strict";
+	"use strict";
 
-    angular.module('app.config').config(["$authProvider", function ($authProvider){
-        // Satellizer configuration that specifies which API
-        // route the JWT should be retrieved from
-        $authProvider.loginUrl = '/api/1/authenticate/auth';
-    }]);
+	angular.module('app.config').config(["$authProvider", function ($authProvider){
+		// Satellizer configuration that specifies which API
+		// route the JWT should be retrieved from
+		$authProvider.loginUrl = '/api/1/authenticate/auth';
+	}]);
 
 })();
 
@@ -214,7 +214,7 @@
 
 	angular.module('app.config').config( ["RestangularProvider", function(RestangularProvider) {
 		RestangularProvider
-		.setBaseUrl('/api/1/');
+			.setBaseUrl('/api/1/');
 	}]);
 
 })();
@@ -225,9 +225,9 @@
 	angular.module('app.config').config(["$mdThemingProvider", function($mdThemingProvider) {
 		/* For more info, visit https://material.angularjs.org/#/Theming/01_introduction */
 		$mdThemingProvider.theme('default')
-		.primaryPalette('indigo')
-		.accentPalette('grey')
-		.warnPalette('red');
+			.primaryPalette('indigo')
+			.accentPalette('grey')
+			.warnPalette('red');
 	}]);
 
 })();
@@ -374,20 +374,20 @@
 })();
 
 (function(){
-    "use strict";
+	"use strict";
 
-    angular.module('app.controllers').controller('GeneratorsCtrl', function(){
-        //
-    });
+	angular.module('app.controllers').controller('GeneratorsCtrl', function(){
+		//
+	});
 
 })();
 
 (function(){
-    "use strict";
+	"use strict";
 
-    angular.module('app.controllers').controller('ElixirCtrl', function(){
-        //
-    });
+	angular.module('app.controllers').controller('ElixirCtrl', function(){
+		//
+	});
 
 })();
 
@@ -476,29 +476,29 @@
 })();
 
 (function (){
-    "use strict";
+	"use strict";
 
-    angular.module('app.controllers').controller('LoginCtrl', function (){
+	angular.module('app.controllers').controller('LoginCtrl', function (){
 
-    });
-
-})();
-
-(function(){
-    "use strict";
-
-    angular.module('app.controllers').controller('MiscCtrl', function(){
-        //
-    });
+	});
 
 })();
 
 (function(){
-    "use strict";
+	"use strict";
 
-    angular.module('app.controllers').controller('RestApiCtrl', function(){
-        //
-    });
+	angular.module('app.controllers').controller('MiscCtrl', function(){
+		//
+	});
+
+})();
+
+(function(){
+	"use strict";
+
+	angular.module('app.controllers').controller('RestApiCtrl', function(){
+		//
+	});
 
 })();
 
@@ -538,29 +538,29 @@
 })();
 
 (function(){
-    "use strict";
+	"use strict";
 
-    angular.module('app.controllers').controller('UnsupportedBrowserCtrl', function(){
-        //
-    });
+	angular.module('app.controllers').controller('UnsupportedBrowserCtrl', function(){
+		//
+	});
 
 })();
 
 (function(){
-    "use strict";
+	"use strict";
 
-    angular.module('app.controllers').controller('AddUsersCtrl', ["$scope", "DialogService", function($scope, DialogService){
+	angular.module('app.controllers').controller('AddUsersCtrl', ["$scope", "DialogService", function($scope, DialogService){
 
-        $scope.save = function(){
-	        //do something useful
-            DialogService.hide();
-        };
+		$scope.save = function(){
+			//do something useful
+			DialogService.hide();
+		};
 
-        $scope.hide = function(){
-        	DialogService.hide();
-        };
+		$scope.hide = function(){
+			DialogService.hide();
+		};
 
-    }]);
+	}]);
 
 })();
 
@@ -569,7 +569,7 @@
 
 	angular.module( 'app.controllers' ).controller( 'DataListingCtrl', function(){
 		//
-    });
+	});
 
 })();
 
