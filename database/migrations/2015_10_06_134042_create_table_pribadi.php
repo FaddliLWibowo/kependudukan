@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDataPribadiTable extends Migration
+class CreateTablePribadi extends Migration
 {
     /**
      * Run the migrations.
@@ -12,23 +12,24 @@ class CreateDataPribadiTable extends Migration
      */
     public function up()
     {
-        Schema::table('pribadi', function (Blueprint $table) {
+        Schema::create('pribadi', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('keluarga_id', 18);
             $table->string('nik', 25)->unique();
             $table->string('title_depan', 20);
             $table->string('title_belakang', 20);
             $table->string('nama', 200);
-            $table->integer('kelamin', 1);
+            $table->string('kelamin');
             $table->string('tempat_lahir', 86);
             $table->string('tanggal_lahir', 4);
-            $table->integer('golongan_darah', 2);
-            $table->integer('agama', 1);
-            $table->integer('status_kawin', 1);
-            $table->integer('status_keluarga', 1);
-            $table->integer('pendidikan', 2);
-            $table->integer('pekerjaan', 2);
-            $table->integer('is_status', 1);
+            $table->string('golongan_darah', 2);
+            $table->string('agama');
+            $table->string('status_kawin');
+            $table->string('status_keluarga');
+            $table->string('pendidikan');
+            $table->string('pekerjaan');
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }
@@ -40,8 +41,6 @@ class CreateDataPribadiTable extends Migration
      */
     public function down()
     {
-        Schema::table('data_data_pribadi', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('pribadi');
     }
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDataOrganisasiTable extends Migration
+class CreateTableOrganisasi extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,13 @@ class CreateDataOrganisasiTable extends Migration
      */
     public function up()
     {
-        Schema::table('organisasi', function (Blueprint $table) {
+        Schema::create('organisasi', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('organisasi_id');
             $table->string('user_id', 60);
-            $table->integer('desa_id', 2);
-            $table->integer('level')->default(1);
+            $table->unsignedInteger('desa_id');
+            $table->integer('level')->nullable()->default(1);
             $table->string('email')->unique();
             $table->timestamps();
         });
@@ -30,8 +31,6 @@ class CreateDataOrganisasiTable extends Migration
      */
     public function down()
     {
-        Schema::table('data_organisasi', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('organisasi');
     }
 }

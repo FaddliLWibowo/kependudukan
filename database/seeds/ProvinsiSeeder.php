@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Provinsi_Seeder extends Seeder
+class ProvinsiSeeder extends Seeder
 
 {
     /**
@@ -10,14 +10,11 @@ class Provinsi_Seeder extends Seeder
      *
      * @return void
      */
-    public
-    function run()
+    public function run()
     {
-        DB::table('data_provinsi')->truncate();
-        DB::table('data_provinsi')->insert([
-
+        DB::table('provinsi')->truncate();
+        DB::table('provinsi')->insert([
             ['id' => 1, 'kode_provinsi' => '35', 'provinsi' => 'Jawa Timur', 'pbb_prov_kode' => '', 'arsip_prov_kode' => '', 'kodepos_prov_kode' => '', 'ramil_prov_kode' => '', 'created_at' => \Carbon\Carbon::now()],
-
         ]);
     }
 }

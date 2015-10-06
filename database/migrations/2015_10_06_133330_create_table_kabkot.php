@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDataKabukotTable extends Migration
+class CreateTableKabkot extends Migration
 {
     /**
      * Run the migrations.
@@ -12,17 +12,18 @@ class CreateDataKabukotTable extends Migration
      */
     public function up()
     {
-        Schema::table('kabupaten', function (Blueprint $table) {
+        Schema::create('kabkot', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('provinsi_id');
+            $table->unsignedInteger('provinsi_id');
             $table->string('kode_kabupaten', 3);
             $table->string('kabupaten');
-            $table->string('status');
+            $table->integer('is_status');
             $table->string('waktu', 4);
-            $table->integer('pbb_kabukot_kode', 2);
-            $table->integer('arsip_kabukot_kode', 3);
-            $table->integer('kodepos_kabukot_kode', 5);
-            $table->integer('ramil_kabukot_kode', 4);
+            $table->unsignedInteger('pbb_kabukot_kode');
+            $table->unsignedInteger('arsip_kabukot_kode');
+            $table->unsignedInteger('kodepos_kabukot_kode');
+            $table->unsignedInteger('ramil_kabukot_kode');
             $table->timestamps();
         });
     }
@@ -34,8 +35,6 @@ class CreateDataKabukotTable extends Migration
      */
     public function down()
     {
-        Schema::table('data_kabukot', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('kabkot');
     }
 }

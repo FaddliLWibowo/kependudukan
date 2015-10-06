@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDataDokumenTable extends Migration
+class CreateTableDokumen extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,8 @@ class CreateDataDokumenTable extends Migration
      */
     public function up()
     {
-        Schema::table('dokumen', function (Blueprint $table) {
+        Schema::create('dokumen', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('nik', 16)->unique();
             $table->string('jenis_dokumen', 1);
@@ -21,7 +22,8 @@ class CreateDataDokumenTable extends Migration
             $table->string('tanggal_terbit', 16);
             $table->string('nomor_seri', 58);
             $table->string('pejabat', 200);
-            $table->integer('status', 1);
+            $table->boolean('status')->default(0);
+            $table->timestamps();
         });
     }
 
@@ -32,8 +34,6 @@ class CreateDataDokumenTable extends Migration
      */
     public function down()
     {
-        Schema::table('data_data_dokumen', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('dokumen');
     }
 }

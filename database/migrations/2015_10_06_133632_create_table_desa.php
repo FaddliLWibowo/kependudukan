@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDataDeskelTable extends Migration
+class CreateTableDesa extends Migration
 {
     /**
      * Run the migrations.
@@ -12,16 +12,17 @@ class CreateDataDeskelTable extends Migration
      */
     public function up()
     {
-        Schema::table('desa', function (Blueprint $table) {
+        Schema::create('desa', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('kecamatan_id', 2);
             $table->string('kode_desa', 4);
             $table->string('desa');
             $table->string('status');
-            $table->integer('pbb_kec_kode', 5);
-            $table->integer('arsip_kec_kode', 3);
-            $table->integer('kodepos_kec_kode,5');
-            $table->integer('ramil_kec_kode', 4);
+            $table->unsignedInteger('pbb_kec_kode');
+            $table->unsignedInteger('arsip_kec_kode');
+            $table->unsignedInteger('kodepos_kec_kode');
+            $table->unsignedInteger('ramil_kec_kode');
             $table->timestamps();
         });
     }
@@ -33,8 +34,6 @@ class CreateDataDeskelTable extends Migration
      */
     public function down()
     {
-        Schema::table('data_deskel', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('desa');
     }
 }

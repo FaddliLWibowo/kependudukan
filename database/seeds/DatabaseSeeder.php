@@ -14,9 +14,9 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $this->call(Desa_Kelurahan_Seeder::class);
-        $this->call(Kabupaten_Seeder::class);
-        $this->call(Kecamatan_Seeder::class);
-        $this->call(Provinsi_Seeder::class);
+        $this->call(DesaSeeder::class);
+        $this->call(KabkotaSeeder::class);
+        $this->call(KecamatanSeeder::class);
+        $this->call(ProvinsiSeeder::class);
     }
 }

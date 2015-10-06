@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDataLainnyaTable extends Migration
+class CreateTablePribadiRincian extends Migration
 {
     /**
      * Run the migrations.
@@ -12,16 +12,17 @@ class CreateDataLainnyaTable extends Migration
      */
     public function up()
     {
-        Schema::table('lainnya', function (Blueprint $table) {
+        Schema::create('pribadi_rincian', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('nik', 16)->uniqe();
-            $table->string('kelainan_fisik', 1);
-            $table->string('cacat_fisik', 1);
+            $table->string('nik', 16)->unique();
+            $table->string('kelainan_fisik');
+            $table->string('cacat_fisik');
             $table->string('warga_negara', 120);
             $table->string('website', 86);
             $table->string('email', 86);
-            $table->string('phone', 20);
-            $table->integer('status', 1);
+            $table->string('telp', 20);
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }
@@ -33,8 +34,6 @@ class CreateDataLainnyaTable extends Migration
      */
     public function down()
     {
-        Schema::table('data_data_lainnya', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('pribadi_rincian');
     }
 }
