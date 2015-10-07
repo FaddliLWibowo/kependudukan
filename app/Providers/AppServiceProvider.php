@@ -1,21 +1,9 @@
-<?php
-
-namespace App\Providers;
+<?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //
-    }
-
     /**
      * Register any application services.
      *
@@ -27,6 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // bind cache repository
+        $this->app->bind('App\Domain\Contracts\Cacheable', 'App\Domain\Repositories\AppCache');
+
         $this->app->bind(
             'Illuminate\Contracts\Auth\Registrar',
             'App\Services\Registrar'

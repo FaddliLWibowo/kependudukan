@@ -33,3 +33,9 @@ $api->version('v1', ['middleware' => 'api.auth'], function ($api) {
     $api->post('test/sample', 'App\Http\Controllers\WelcomeController@sample');
 
 });
+
+# Handle Kependudukan
+Route::group(['namespace' => 'Kependudukan', 'prefix' => 'api/v1'], function () {
+    Route::resource('keluarga', 'KeluargaController');
+
+});
