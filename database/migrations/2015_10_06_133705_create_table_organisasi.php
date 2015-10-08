@@ -17,7 +17,7 @@ class CreateTableOrganisasi extends Migration
             $table->increments('id');
             $table->string('organisasi_id');
             $table->string('user_id', 60);
-            $table->unsignedInteger('desa_id');
+            $table->integer('desa_id');
             $table->integer('level')->nullable()->default(1);
             $table->string('email')->unique();
             $table->timestamps();

@@ -19,10 +19,10 @@ class CreateTableDesa extends Migration
             $table->string('kode_desa', 4);
             $table->string('desa');
             $table->string('status');
-            $table->unsignedInteger('pbb_kec_kode');
-            $table->unsignedInteger('arsip_kec_kode');
-            $table->unsignedInteger('kodepos_kec_kode');
-            $table->unsignedInteger('ramil_kec_kode');
+            $table->integer('pbb_kec_kode');
+            $table->integer('arsip_kec_kode');
+            $table->integer('kodepos_kec_kode');
+            $table->integer('ramil_kec_kode');
             $table->timestamps();
         });
     }

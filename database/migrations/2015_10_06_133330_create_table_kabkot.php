@@ -15,15 +15,15 @@ class CreateTableKabkot extends Migration
         Schema::create('kabkot', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->unsignedInteger('provinsi_id');
+            $table->integer('provinsi_id');
             $table->string('kode_kabupaten', 3);
             $table->string('kabupaten');
             $table->integer('is_status');
             $table->string('waktu', 4);
-            $table->unsignedInteger('pbb_kabukot_kode');
-            $table->unsignedInteger('arsip_kabukot_kode');
-            $table->unsignedInteger('kodepos_kabukot_kode');
-            $table->unsignedInteger('ramil_kabukot_kode');
+            $table->integer('pbb_kabukot_kode');
+            $table->integer('arsip_kabukot_kode');
+            $table->integer('kodepos_kabukot_kode');
+            $table->integer('ramil_kabukot_kode');
             $table->timestamps();
         });
     }

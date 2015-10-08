@@ -20,7 +20,7 @@ class CreateTableMutasi extends Migration
             $table->string('rt', 3);
             $table->string('rw', 20);
             $table->string('dusun');
-            $table->unsignedInteger('desa_id');
+            $table->integer('desa_id');
             $table->boolean('status')->default(0);
             $table->timestamps();
         });
