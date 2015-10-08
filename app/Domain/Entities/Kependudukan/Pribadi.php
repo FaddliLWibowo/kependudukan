@@ -15,13 +15,19 @@ class Pribadi extends Model
     protected $fillable = [
         'keluarga_id',
         'nik',
+        'title_depan',
+        'title_belakang',
         'nama',
         'kelamin',
         'tempat_lahir',
         'tanggal_lahir',
+        'golongan_darah',
         'agama',
         'status_kawin',
         'status_keluarga',
+        'pendidikan',
+        'pekerjaan',
+        'status',
     ];
 
     /**
