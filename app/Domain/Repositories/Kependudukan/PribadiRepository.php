@@ -84,7 +84,7 @@ class PribadiRepository extends AbstractRepository implements Crudable, Paginabl
 
         } catch (\Exception $e) {
             // store errors to log
-            Log::error('class : ' . KeluargaRepository::class . ' method : create | ' . $e);
+            Log::error('class : ' . PribadiRepository::class . ' method : create | ' . $e);
 
             return $this->createError();
         }
@@ -125,7 +125,7 @@ class PribadiRepository extends AbstractRepository implements Crudable, Paginabl
 
         } catch (\Exception $e) {
             // store errors to log
-            Log::error('class : ' . KeluargaRepository::class . ' method : update | ' . $e);
+            Log::error('class : ' . PribadiRepository::class . ' method : update | ' . $e);
 
             return $this->createError();
         }
@@ -148,7 +148,7 @@ class PribadiRepository extends AbstractRepository implements Crudable, Paginabl
 
         } catch (\Exception $e) {
             // store errors to log
-            Log::error('class : ' . KeluargaRepository::class . ' method : delete | ' . $e);
+            Log::error('class : ' . PribadiRepository::class . ' method : delete | ' . $e);
 
             return $this->createError();
         }
