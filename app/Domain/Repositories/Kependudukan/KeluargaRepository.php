@@ -66,7 +66,7 @@ class KeluargaRepository extends AbstractRepository implements Crudable, Paginab
                 'rt'      => e($data['rt']),
                 'rw'      => e($data['rw']),
                 'dusun'   => e($data['dusun']),
-                'telepon' => e($data['telepon']),
+                'telepon' => (empty($data['telepon'])) ? null : e($data['telepon']),
                 'status'  => (empty($data['status'])) ? '0' : e($data['status']),
             ]);
 

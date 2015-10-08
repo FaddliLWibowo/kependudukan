@@ -19,6 +19,8 @@ class Keluarga extends Model
         'rt',
         'rw',
         'dusun',
+        'telepon',
+        'status',
     ];
 
     /**

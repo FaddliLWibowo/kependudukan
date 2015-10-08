@@ -21,7 +21,7 @@ class CreateTableKeluarga extends Migration
             $table->string('rt', 3);
             $table->string('rw', 3);
             $table->string('dusun', 120);
-            $table->string('telepon', 20);
+            $table->string('telepon', 20)->nullable();
             $table->boolean('status')->default(0);
             $table->timestamps();
         });

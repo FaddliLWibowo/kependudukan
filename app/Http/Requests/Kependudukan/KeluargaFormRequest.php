@@ -16,6 +16,7 @@ class KeluargaFormRequest extends Request
         'rt'      => 'RT',
         'rw'      => 'RW',
         'dusun'   => 'Dusun',
+        'telepon' => 'Telepon',
     ];
 
     /**
@@ -26,12 +27,13 @@ class KeluargaFormRequest extends Request
     public function rules()
     {
         return [
-            'nik_kk'        => 'required|max:16|unique:keluarga,nik_kk',
-            'nama_kk'       => 'required|max:60',
-            'alamat'        => 'required|max:225',
-            'rt'            => 'required|max:3',
-            'rw'            => 'required|max:3',
-            'dusun'         => 'required|max:50',
+            'nik_kk'  => 'required|max:16|unique:keluarga,nik_kk',
+            'nama_kk' => 'required|max:60',
+            'alamat'  => 'required|max:225',
+            'rt'      => 'required|max:3',
+            'rw'      => 'required|max:3',
+            'dusun'   => 'required|max:50',
+            'telepon' => 'max:15',
         ];
     }
 
@@ -57,12 +59,13 @@ class KeluargaFormRequest extends Request
         return [
             'success'    => false,
             'validation' => [
-                'nik_kk'        => $message->first('nik_kk'),
-                'nama_kk'       => $message->first('nama_kk'),
-                'alamat'        => $message->first('alamat'),
-                'rt'            => $message->first('rt'),
-                'rw'            => $message->first('rw'),
-                'dusun'         => $message->first('dusun'),
+                'nik_kk'  => $message->first('nik_kk'),
+                'nama_kk' => $message->first('nama_kk'),
+                'alamat'  => $message->first('alamat'),
+                'rt'      => $message->first('rt'),
+                'rw'      => $message->first('rw'),
+                'dusun'   => $message->first('dusun'),
+                'telepon' => $message->first('telepon'),
             ]
         ];
     }
