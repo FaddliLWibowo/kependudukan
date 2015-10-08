@@ -42,6 +42,9 @@ Route::group(['namespace' => 'Kependudukan', 'prefix' => 'api/v1'], function () 
     // handle pribadi/ individu
     Route::resource('kependudukan-pribadi', 'PribadiController');
 
+    // handle pribadi rincian
+    Route::resource('kependudukan-pribadi-rincian', 'PribadiRincianController');
+
     // handle ortu
     Route::resource('kependudukan-ortu', 'OrtuController');
 

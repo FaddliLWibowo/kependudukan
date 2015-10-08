@@ -16,12 +16,12 @@ class CreateTablePribadiRincian extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('nik', 16)->unique();
-            $table->string('kelainan_fisik');
-            $table->string('cacat_fisik');
-            $table->string('warga_negara', 120);
-            $table->string('website', 86);
-            $table->string('email', 86);
-            $table->string('telp', 20);
+            $table->string('kelainan_fisik')->nullable();
+            $table->string('cacat_fisik')->nullable();
+            $table->string('warga_negara', 35);
+            $table->string('website', 85)->nullable();
+            $table->string('email', 85)->nullable();
+            $table->string('telp', 20)->nullable();
             $table->boolean('status')->default(0);
             $table->timestamps();
         });
