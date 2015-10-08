@@ -26,11 +26,6 @@ class Keluarga extends Model
     /**
      * @var string
      */
-    protected $primaryKey = 'id';
-
-    /**
-     * @var string
-     */
     public static $tags = 'keluarga';
 
     /**
