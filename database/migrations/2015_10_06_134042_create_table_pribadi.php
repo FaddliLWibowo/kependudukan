@@ -19,11 +19,11 @@ class CreateTablePribadi extends Migration
             $table->string('nik', 25)->unique();
             $table->string('title_depan', 20)->nullable();
             $table->string('title_belakang', 20)->nullable();
-            $table->string('nama', 200);
+            $table->string('nama');
             $table->string('kelamin');
-            $table->string('tempat_lahir', 86);
-            $table->string('tanggal_lahir', 4);
-            $table->string('golongan_darah', 2)->nullable();
+            $table->string('tempat_lahir');
+            $table->string('tanggal_lahir');
+            $table->string('golongan_darah')->nullable();
             $table->string('agama');
             $table->string('status_kawin');
             $table->string('status_keluarga');

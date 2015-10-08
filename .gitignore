@@ -3,10 +3,6 @@
 .env
 /bower_components
 npm-debug.log
-.idea/
-composer.phar
-composer.lock
-storage
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

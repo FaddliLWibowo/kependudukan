@@ -36,6 +36,10 @@ $api->version('v1', ['middleware' => 'api.auth'], function ($api) {
 
 # Handle Kependudukan
 Route::group(['namespace' => 'Kependudukan', 'prefix' => 'api/v1'], function () {
-    Route::resource('keluarga', 'KeluargaController');
+    // handle keluarga (kk)
+    Route::resource('kependudukan-keluarga', 'KeluargaController');
+
+    // handle pribadi/ individu
+    Route::resource('kependudukan-pribadi', 'PribadiController');
 
 });
