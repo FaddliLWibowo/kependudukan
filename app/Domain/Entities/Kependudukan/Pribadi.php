@@ -33,11 +33,6 @@ class Pribadi extends Model
     /**
      * @var string
      */
-    protected $primaryKey = 'id';
-
-    /**
-     * @var string
-     */
     public static $tags = 'pribadi';
 
     /**
